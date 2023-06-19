@@ -18,9 +18,11 @@ USER_TYPES = (
 
 
 class User(AbstractUser):
-    type = models.CharField(max_length=50, null=False, blank=False, choices=USER_TYPES)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    type = models.CharField(max_length=50,
+                            null=False, blank=False,
+                            choices=USER_TYPES)
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.CharField(max_length=50, blank=True)
     email = models.EmailField(unique=True)
 
 
