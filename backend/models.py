@@ -101,6 +101,7 @@ class Shop(models.Model):
     file_name = models.OneToOneField(User, verbose_name='Пользователь',
                                      blank=True, null=True,
                                      on_delete=models.CASCADE)
+    state = models.BooleanField()
 
 
 class Category(models.Model):

@@ -5,13 +5,18 @@ from django_rest_passwordreset.signals import reset_password_token_created
 
 from backend.models import ConfirmEmailToken, User
 
+'''
+https://django.fun/ru/qa/187567/
+В Django 4.0 любой код, который вызывает Signal() с
+аргументом providing_args, теперь вызывает TypeError.
+'''
 new_user_registered = Signal(
-    providing_args=['user_id'],
+    # providing_args=['user_id'],
 )
 
 
 new_order = Signal(
-    providing_args=['user_id'],
+    # providing_args=['user_id'],
 )
 
 
