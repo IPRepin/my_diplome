@@ -22,14 +22,14 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         read_only_fields = ('id',)
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Category
         fields = ('id', 'name',)
         read_only_fields = ('id',)
 
 
-class ShopSerializer(serializers.ModelSerializer):
+class ShopSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Shop
         fields = ('id', 'name', 'state',)
