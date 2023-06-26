@@ -6,7 +6,7 @@ from backend.models import User, Shop, Category, Product, ProductInfo, Parameter
 
 
 @admin.register(User)
-    class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):
     """
     Панель управления пользователями
     """
